@@ -1,0 +1,175 @@
+/* Styles from the GreenSock website */
+body {
+  font-weight: 300;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #3b475c;
+  color: #fff;
+}
+.ipsType_right {
+  text-align: right;
+}
+.ipsType_center {
+  text-align: center;
+}
+.cInnerContent {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ipsSpacer_bottom_double {
+  margin-bottom: 30px;
+}
+.ipsGrid {
+  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ipsGrid::before, .ipsGrid::after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.ipsGrid > [class*="ipsGrid_span"] {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  box-sizing: border-box;
+}
+.ipsGrid > .ipsGrid_span5 {
+  width: 40.42553191489362%;
+}
+.ipsGrid > .ipsGrid_span7 {
+  width: 57.44680851063829%;
+}
+.ipsGrid > [class*="ipsGrid_span"] {
+  float: left;
+  margin-left: 2%;
+}
+.ipsGrid > [class*="ipsGrid_span"]:first-child {
+  margin-left: 0;
+}
+.feature {
+  display: flex;
+  align-items: center;
+}
+.card {
+  width: 200px;
+  height: 387px;
+  margin-bottom: 30px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 1px 1px 5px 1px #CCCCCC;
+/*   transition: 0.3s; */
+}
+/* .featured-image-container .card {
+  padding: 10px;
+  height: 0;
+  padding-bottom: calc(100% - 10px); */
+}
+h2.heading_large {
+  font-size: 1.8em;
+}
+img {
+  max-width: 100%;
+}
+
+.header-section {
+  margin: 200px auto;
+}
+
+.gs_reveal {
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform, opacity;
+}
+.text {
+  padding-left: 50px;
+}
+@media (max-width: 600px) {
+  .text {
+    display: contents;
+  }
+
+}
+.container{
+  left: 70px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* z-index: 4; */
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrapper div{
+  width: 70px;
+  height: 70px;
+  border: 5px solid white;
+  position: absolute;
+}
+.wrapper div:nth-child(1){
+  top: 0%;
+  left: 30%;
+  animation: square 5s linear infinite;
+}
+.wrapper div:nth-child(2){
+  top: -10%;
+  left: 50%;
+  animation: square 8s linear infinite;
+}
+.wrapper div:nth-child(3){
+  top: 60%;
+  left: 10%;
+  animation: square 9s linear infinite;
+}
+.wrapper div:nth-child(4){
+  top: 50%;
+  left: 40%;
+  animation: square 11s linear infinite;
+}
+.wrapper div:nth-child(5){
+  top: 40%;
+  left: 60%;
+  animation: square 7s linear infinite;
+}
+.wrapper div:nth-child(6){
+  top: 80%;
+  left: 30%;
+  animation: square 13s linear infinite;
+}
+.wrapper div:nth-child(7){
+  top: 10%;
+  left: 10%;
+  animation: square 12s linear infinite;
+}
+.wrapper div:nth-child(8){
+  top: 20%;
+  left: 85%;
+  animation: square 8s linear infinite;
+}
+.wrapper div:nth-child(9){
+  top: 75%;
+  left: 65%;
+  animation: square 9s linear infinite;
+}
+.wrapper div:nth-child(10){
+  top: 80%;
+  left: 85%;
+  animation: square 7s linear infinite;
+}
+@keyframes square {
+  0%{
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 0.2;
+  }
+  100%{
+    transform: scale(1.2) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
