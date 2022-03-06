@@ -56,7 +56,9 @@ p {
   font-size: large;
 }
 
-
+#myCanvas {
+  margin-top: 10%;
+}
 @media (max-width: 660px) {
   #section-about {
     flex-direction: row;
