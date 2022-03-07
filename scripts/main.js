@@ -2,7 +2,6 @@ function loadedHome() {
 	;(blocked = !1),
 		$loading.addClass('out'),
 		setTimeout(function() {
-			//randomWord(),
 				$textLoading.addClass('out'),
 				$elem.filter('.center').removeClass('center'),
 				$overlay.removeClass('--flat'),
@@ -23,7 +22,6 @@ function calcLoaded() {
 
 function loadImages() {
 	;(loaded = words.length), calcLoaded(), loadedHome()
-	// for (var downloadingImage = [], i = 0; i < total; i++) downloadingImage.push(new Image()), (downloadingImage[i].onload = function() {}), (downloadingImage[i].src = baseUrl + 'img/home/' + words[i] + '.gif')
 }
 var NUM_PARTICLES = (ROWS = 26) * (COLS = 26),
 	THICKNESS = Math.pow(30, 2),
@@ -106,7 +104,6 @@ var $about,
 				ajax && $about.find('#header-about .wow').addClass('delay')
 		}
 	}
-about(),
 	$(function() {
 		Modernizr.svg ||
 			$('.cliente__img img').each(function() {
@@ -118,8 +115,7 @@ about(),
 			})
 	})
 var words = ['awesome', 'bold', 'cuckoo', 'curious', 'intense', 'loud', 'fearless', 'unique'],
-	wordsBt = ["oooh, yeah don't stop", "please, don't stop", 'hmmmm... yeah!'],
-	textBt = 'click and find out',
+	
 	blocked = !0,
 	total = words.length,
 	count = 0,
@@ -139,15 +135,12 @@ var words = ['awesome', 'bold', 'cuckoo', 'curious', 'intense', 'loud', 'fearles
 	$gifs
 $(document).ready(function() {
 	;($home = $('#home')),
-		//($gifs = $home.find('.gifs-landing')),
 		($moldura = $home.find('.moldura-landing')),
-		($btClick = $home.find('.clickgif')),
 		($loading = $home.find('.barra-loading')),
 		($loadingBarra = $home.find('.barra-loading__barra')),
 		($loadingText = $home.find('.barra-loading__porcentagem')),
 		($textLoading = $home.find('.text-loading')),
 		($overlay = $home.find('.overlay-landing')),
-		loadImages(),
 		$home.on('mousedown touchstart', '.link-landing', function(event) {
 			event.stopPropagation()
 		}),
@@ -163,6 +156,18 @@ $(document).ready(function() {
 			  }),
 				$home.on('mouseleave', '.moldura-landing__right', function() {
 					$moldura.find('.moldura-landing__right').removeClass('--active')
+			  })
+			),
+			($home.on('touchstart'),
+			  $home.on('touchend'),
+			  $home.on('touchstart', '.link-landing', function() {
+					$(this).hasClass('--left') ? $moldura.find('.moldura-landing__left').addClass('--active') : $moldura.find('.moldura-landing__right').addClass('--active')
+			  }),
+			  $home.on('touchend', '.moldura-landing__left', function() {
+					$moldura.find('.moldura-landing__right').removeClass('--active')
+			  }),
+				$home.on('touchend', '.moldura-landing__right', function() {
+					$moldura.find('.moldura-landing__left').removeClass('--active')
 			  })
 			),
 		$home.on('selectstart', !1)
