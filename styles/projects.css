@@ -76,6 +76,7 @@ body {
   align-items: center;
 }
 .card {
+  display: contents;
   width: 200px;
   height: 387px;
   margin-bottom: 30px;
@@ -86,13 +87,20 @@ body {
   box-shadow: 1px 1px 5px 1px #CCCCCC;
   /* transition: 0.3s; */
 }
+.chat {
+  max-width: 100%;
+}
 
 
 h2.heading_large {
   font-size: 1.8em;
 }
+
+p {
+  font-size: large;
+}
 img {
-  max-width: 100%;
+  max-width: 40%;
 }
 
 .header-section {
